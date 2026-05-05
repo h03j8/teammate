@@ -1,65 +1,158 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+    <div>
+
+      {/* HERO 섹션 */}
+      <section style={{
+        textAlign: 'center',
+        padding: '80px 20px'
+      }}>
+        <h1 style={{
+          fontSize: '36px',
+          fontWeight: 800,
+          marginBottom: '16px'
+        }}>
+          대학생 창업팀,
+          <br />함께할 팀원을 찾으세요
+        </h1>
+
+        <p style={{
+          fontSize: '16px',
+          color: '#6b7280',
+          marginBottom: '32px'
+        }}>
+          TeamMate는 아이디어는 있지만 팀원이 부족한 대학생을 위해
+          <br />
+          쉽고 빠르게 팀을 구성할 수 있도록 돕습니다.
+        </p>
+
+        {/* CTA 버튼 */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '16px'
+        }}>
+          <a href="/create">
+            <button style={{
+              padding: '14px 24px',
+              background: '#2563eb',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '10px',
+              fontWeight: 600,
+              cursor: 'pointer'
+            }}>
+              팀원 모집하기
+            </button>
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+
+          <a href="/list">
+            <button style={{
+              padding: '14px 24px',
+              background: '#f3f4f6',
+              border: 'none',
+              borderRadius: '10px',
+              fontWeight: 600,
+              cursor: 'pointer'
+            }}>
+              팀 찾기
+            </button>
           </a>
         </div>
-      </main>
+      </section>
+
+      {/* 기능 소개 */}
+      <section style={{
+        padding: '60px 20px'
+      }}>
+        <h2 style={{
+          textAlign: 'center',
+          fontSize: '24px',
+          fontWeight: 700,
+          marginBottom: '40px'
+        }}>
+          TeamMate는 이렇게 도와요
+        </h2>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '24px'
+        }}>
+
+          {/* 카드 1 */}
+          <div style={{
+            border: '1px solid #e5e7eb',
+            borderRadius: '16px',
+            padding: '24px'
+          }}>
+            <h3 style={{ marginBottom: '10px' }}>
+              🚀 팀원 모집
+            </h3>
+            <p style={{ color: '#6b7280' }}>
+              아이디어를 공유하고 함께할 팀원을 모집하세요.
+            </p>
+          </div>
+
+          {/* 카드 2 */}
+          <div style={{
+            border: '1px solid #e5e7eb',
+            borderRadius: '16px',
+            padding: '24px'
+          }}>
+            <h3 style={{ marginBottom: '10px' }}>
+              🔍 팀 탐색
+            </h3>
+            <p style={{ color: '#6b7280' }}>
+              다양한 프로젝트를 확인하고 참여할 팀을 찾아보세요.
+            </p>
+          </div>
+
+          {/* 카드 3 */}
+          <div style={{
+            border: '1px solid #e5e7eb',
+            borderRadius: '16px',
+            padding: '24px'
+          }}>
+            <h3 style={{ marginBottom: '10px' }}>
+              🤝 빠른 연결
+            </h3>
+            <p style={{ color: '#6b7280' }}>
+              연락 정보를 통해 바로 팀에 합류할 수 있습니다.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 하단 CTA */}
+      <section style={{
+        textAlign: 'center',
+        padding: '80px 20px'
+      }}>
+        <h2 style={{
+          fontSize: '24px',
+          fontWeight: 700,
+          marginBottom: '16px'
+        }}>
+          지금 바로 시작해보세요
+        </h2>
+
+        <a href="/create">
+          <button style={{
+            padding: '14px 28px',
+            background: '#111827',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '10px',
+            fontWeight: 600,
+            cursor: 'pointer'
+          }}>
+            팀원 모집 시작하기
+          </button>
+        </a>
+      </section>
+
     </div>
-  );
+  )
 }
